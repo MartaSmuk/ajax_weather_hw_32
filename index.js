@@ -1,11 +1,16 @@
-function getWeather() {
-    let xhr = new XMLHttpRequest();
-    // let url = "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=171dfa9d1460da65a4e66008d4090f53";
-    // let url = "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=171dfa9d1460da65a4e66008d4090f53";
-    // let url = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=171dfa9d1460da65a4e66008d4090f53";
-    // let url = "https://api.openweathermap.org/data/2.5/weather?lat=50.4851493&lon=30.4721233&appid=d5e5cf68a96f2aa25ea1ca879d08a6b1";
-    let url = "https://api.openweathermap.org/data/2.5/weather?q=LVIV&units=metric&APPID=d5e5cf68a96f2aa25ea1ca879d08a6b1";
+const apiKey = "d5e5cf68a96f2aa25ea1ca879d08a6b1";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
+const inputCityName = document.querySelector('.search__input');
+const searchButton = document.querySelector('.weather__search');
+let cityName;
+
+searchButton.addEventListener('click', getWeather)
     
+function getWeather() {
+
+    let xhr = new XMLHttpRequest();
+    cityName = inputCityName.value;
+    const url = `${apiUrl}?q=${cityName}&units=metric&APPID=${apiKey}`;
 
     xhr.open('GET', url, true);
     xhr.onreadystatechange = function() {
@@ -19,9 +24,6 @@ function getWeather() {
     }
     xhr.send();
 }
-
-
-getWeather();
 
 function displayWeather(data) {
     const weatherContent = document.getElementById('weather-content');

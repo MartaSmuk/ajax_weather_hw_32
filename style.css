@@ -1,5 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.weather__wrapper{
+    background-image: url(img/myWeather.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    min-height: 100vh;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    padding: 8% 0 0 0; 
+}
+
 .search__input {
     width: 20%;
-    padding: 1%;
-    border: 2px solid black;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(163, 171, 174);
+}
+
+.weather__search {
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(163, 171, 174);
+}
+
+#weather-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 27px 523px 338px;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    line-height: 32px;
 }

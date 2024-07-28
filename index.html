@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax weater</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="text" class="search__input"></input>
-    <div id="weather-content"></div>
+    <div class="weather__wrapper">
+        <div class="search">
+            <select type="text" class="search__input">
+                <option value="Kyiv">Kyiv</option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Dnipro">Dnipro</option>
+                <option value="Zaporizhzhia">Zaporizhzhia</option>
+                <option value="Mykolaiv">Mykolaiv</option>
+                <option value="Mariupol">Mariupol</option>
+                <option value="Berdyans'k">Berdyans'k</option>
+                <option value="Odesa">Odesa</option>
+                <option value="Lviv">Lviv</option>
+            </select>
+            <button class="weather__search">Search</button>
+        </div>
+        <div id="weather-content"></div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
